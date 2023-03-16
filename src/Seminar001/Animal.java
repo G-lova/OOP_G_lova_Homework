@@ -12,37 +12,49 @@ public class Animal {
     }
 
     public Animal(String color, int legsCount) {
-        this("����������", color);
+        this("Безымянный", color);
         this.legsCount = legsCount;
     }
 
     public Animal() {
-        this("����������", "������");
+        this("Безымянный", "чёрный");
     }
 
-    // todo: ���� ������, ���������� �� ��������� �������.
-    //  !!!�������� �������� �� ������ ������� ������ ����� � sysout java
+    // todo: Ниже методы, отвечающие за состояние объекта.
+    //  !!!Обратите внимание на разные способы вывода строк в sysout java
 
 //    public void wakeUp() {
-//        System.out.println(getType() + ": ���������");
+//        System.out.println(getType() + ": проснулся");
 //    }
 //
 //    public void findFood() {
-//        String out = String.format("%s: ����� ���%n", getType());
+//        String out = String.format("%s: нашел еду%n", getType());
 //        System.out.println(out);
 //    }
 //
 //    public void eat() {
-//        System.out.printf("%s: ����%n", getType());
+//        System.out.printf("%s: поел%n", getType());
 //    }
 //
 //    public void toPlay() {
-//        System.out.printf("%s: �������%n", getType());
+//        System.out.printf("%s: поиграл%n", getType());
 //    }
 //
 //    public void goToSleep() {
-//        System.out.printf("%s: �����%n", getType());
+//        System.out.printf("%s: уснул%n", getType());
 //    }
+
+    public void toGo() {
+        System.out.printf("%s: пошёл%n", getType());
+    }
+
+    public void fly() {
+        System.out.printf("%s: полетел%n", getType());
+    }
+
+    public void swim() {
+        System.out.printf("%s: поплыл%n", getType());
+    }
 
     public void speak() {
         System.out.printf("%s: ...%n", getType());
@@ -50,7 +62,7 @@ public class Animal {
 
     public void hunt() {}
 
-    //todo: ���� ������� � �������. !!! �������� ��������, �� � ������� ���� ���� ������(���� �� ����� ������������)
+    //todo: Ниже геттеры и сеттеры. !!! Обратите внимание, не к каждому полю есть сеттер(один из шагов инкапсуляции)
 
     public String getName() {
         return name;

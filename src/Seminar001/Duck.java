@@ -9,10 +9,7 @@ public class Duck extends Animal {
 
     @Override
     public void speak() {
-        System.out.printf("%s ������: ���!%n", getType());
+        System.out.printf("%s сказал: Кря!%n", getType());
     }
 
-    public void fly() {
-        System.out.printf("%s �������!%n", getType());
-    }
 }

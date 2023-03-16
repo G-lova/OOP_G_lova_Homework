@@ -10,6 +10,11 @@ public class Dog extends Animal {
 
     @Override
     public void speak() {
-        System.out.printf("%s ������: ���!%n", getType());
+        System.out.printf("%s сказал: Гав!%n", getType());
+    }
+
+    @Override
+    public void fly() {
+        System.out.printf("%s: прыгнул, помахал лапами%n", getType());
     }
 }
