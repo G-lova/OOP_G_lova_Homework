@@ -10,10 +10,15 @@ public abstract class Drug implements Iterable<Component>, Comparable<Drug> {
     public int compareTo(Drug o) {
         int comparator = Integer.compare(getDrugPower(), o.getDrugPower());
         if (comparator == 0) {
-            return components.get(0).compareTo(o.components.get(0));
-        } else {
-            return comparator;
-        }
+            int comparator1 = 0;
+            int size = components.size();
+            if (components.size() > o.components.size()) size = o.components.size();
+            for (index = 0; index < size; index++) {
+                comparator1 = components.get(index).compareTo(o.components.get(index));
+                if (comparator1 != 0) break;
+            }
+            return comparator1;
+        } else return comparator;
     }
 
     @Override

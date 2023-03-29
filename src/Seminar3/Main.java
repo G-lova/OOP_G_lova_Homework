@@ -17,13 +17,13 @@ public class Main {
             System.out.println(component);
         }
         List<Component> componentCat2 = List.of(new Azitron("Азитрон","4",4),
-                new Pinecilin("Пинецилин", "18", 6));
+                new Pinecilin("Пинецилин", "15", 6));
         List<Component> componentCat4 = List.of(new Water("Пинецилин", "20", 12),
                 new Azitron("Азитрон", "10", 9));
         List<Component> componentCat3 = List.of(new Water("Вода", "20", 12),
                 new Azitron("Азитрон", "10", 9));
         List<Component> componentCat5 = List.of(new Water("Вода", "20", 12),
-                new Azitron("Пинецилин", "18", 6));
+                new Azitron("Пинецилин", "18", 9));
         CatDrug drug1 = new CatDrug(componentCat2);
         CatDrug drug2 = new CatDrug(componentCat3);
         CatDrug drug4 = new CatDrug(componentCat4);
