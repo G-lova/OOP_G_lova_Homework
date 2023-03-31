@@ -61,9 +61,9 @@ public class GBLinkedList<T> implements GBList<T> {
 
     @Override
     public GBNode<T> get(int index) {
-        if (size == 0) return first;
+        if ((size == 0) || (index >= size)) return null;
         GBNode<T> element = first;
-        for (int i = 0; (i < index) && (index <= size); i++) {
+        for (int i = 0; i < index; i++) {
             element = element.next;
         }
         return element;
