@@ -5,10 +5,6 @@ import Seminar4.gb.list.GBLinkedList;
 
 public class Main {
     public static void main(String[] args) {
-//        GBList<String> strings = new GBArrayList<>();
-//        strings.add("один");
-//        strings.add("два");
-//        strings.add("три");
         GBLinkedList<String> strings = new GBLinkedList<>();
         strings.addLast("один");
         strings.addLast("два");
@@ -22,7 +18,7 @@ public class Main {
         System.out.println("-----FOREACH------");
         strings.forEach(System.out::println);
         System.out.println("-------REMOVE-------");
-        System.out.println(strings.remove(0));
+        System.out.println(strings.remove(2));
         System.out.println(strings.size());
         System.out.println("-----FOREACH------");
         strings.forEach(System.out::println);

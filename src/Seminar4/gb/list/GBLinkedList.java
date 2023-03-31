@@ -37,32 +37,26 @@ public class GBLinkedList<T> implements GBList<T> {
 
     @Override
     public GBNode<T> remove(int index) {
-        try {
-            GBNode<T> element = get(index);
-            if ((index > 0) && (index < size-1)) {
-                GBNode<T> elementPrev = get(index - 1);
-                GBNode<T> elementNext = get(index + 1);
-                elementPrev.next = elementNext;
-                elementNext.prev = elementPrev;
-            }
-            else {
-                if (index == 0) {
-                    GBNode<T> elementNext = get(index + 1);
-                    elementNext.prev = null;
-                    first = elementNext;
-                }
-                else {
-                    GBNode<T> elementPrev = get(index - 1);
-                    elementPrev.next = null;
-                    last = elementPrev;
-                }
-            }
-            size--;
-            return element;
-        } catch (IndexOutOfBoundsException e) {
-            e.printStackTrace();
+        if ((index < 0) || (index >= size)) return null;
+        GBNode<T> element = get(index);
+        if ((index > 0) && (index < size - 1)) {
+            GBNode<T> elementPrev = get(index - 1);
+            GBNode<T> elementNext = get(index + 1);
+            elementPrev.next = elementNext;
+            elementNext.prev = elementPrev;
         }
-        return null;
+        if (index == 0) {
+            GBNode<T> elementNext = get(index + 1);
+            elementNext.prev = null;
+            first = elementNext;
+        }
+        if (index == size - 1) {
+            GBNode<T> elementPrev = get(index - 1);
+            elementPrev.next = null;
+            last = elementPrev;
+        }
+        size--;
+        return element;
     }
 
     @Override

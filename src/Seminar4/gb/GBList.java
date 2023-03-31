@@ -2,7 +2,6 @@ package Seminar4.gb;
 
 import Seminar4.gb.list.GBNode;
 
-//Simple
 public interface GBList<T> extends Iterable<T>{
     void addFirst(T t);
     void addLast(T t);
