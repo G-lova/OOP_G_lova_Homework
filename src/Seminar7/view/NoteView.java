@@ -39,7 +39,7 @@ public class NoteView {
                             .append(text);
                     break;
                 case READ:
-                    String id = prompt("Идентификатор пользователя: ");
+                    String id = prompt("Идентификатор заметки: ");
                     try {
                         Note noteToRead = noteController.readNote(Long.parseLong(id));
                         System.out.println(noteToRead);
