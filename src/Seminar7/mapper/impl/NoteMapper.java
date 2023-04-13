@@ -6,7 +6,7 @@ import Seminar7.model.Note;
 public class NoteMapper implements Mapper<Note, String> {
     @Override
     public String toInput(Note note) {
-        return String.format("%s,%s,%s,%s", note.getId(), note.getDate(), note.getTitle(), note.getText());
+        return String.format("%s,%,%s,%s", note.getId(), note.getDate(), note.getTitle(), note.getText());
     }
 
     @Override
