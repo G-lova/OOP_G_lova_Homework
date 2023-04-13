@@ -1,4 +1,6 @@
-package Seminar7;
+package Seminar7.util.impl;
+
+import Seminar7.util.Operation;
 
 import java.io.*;
 import java.util.ArrayList;

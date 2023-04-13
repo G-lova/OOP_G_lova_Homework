@@ -4,6 +4,7 @@ import Seminar7.controller.NoteController;
 import Seminar7.model.Note;
 import Seminar7.repository.GBRepository;
 import Seminar7.repository.impl.NoteRepository;
+import Seminar7.util.impl.FileOperation;
 import Seminar7.view.NoteView;
 
 import static Seminar5.notebook.log.Logger.createLogFile;

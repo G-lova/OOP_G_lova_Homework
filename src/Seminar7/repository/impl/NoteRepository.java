@@ -1,6 +1,6 @@
 package Seminar7.repository.impl;
 
-import Seminar7.FileOperation;
+import Seminar7.util.impl.FileOperation;
 import Seminar7.repository.GBRepository;
 import Seminar7.model.Note;
 import Seminar7.mapper.impl.NoteMapper;
